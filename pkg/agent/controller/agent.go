@@ -167,7 +167,7 @@ func (a *Controller) serviceExportToRemoteServiceImport(obj runtime.Object, op s
 	}
 
 	serviceImport.Spec = lighthousev2a1.ServiceImportSpec{
-		Type: lighthousev2a1.SuperclusterIP,
+		Type: lighthousev2a1.ClusterSetIP,
 	}
 	serviceImport.Status = lighthousev2a1.ServiceImportStatus{
 		Clusters: []lighthousev2a1.ClusterStatus{
