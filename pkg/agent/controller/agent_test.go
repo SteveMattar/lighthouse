@@ -202,7 +202,8 @@ func newTestDiver() *testDriver {
 			},
 		}
 
-		t.restMapper = test.GetRESTMapperFor(&lighthousev2a1.ServiceExport{}, &lighthousev2a1.ServiceImport{}, &corev1.Service{})
+		t.restMapper = test.GetRESTMapperFor(&lighthousev2a1.ServiceExport{}, &lighthousev2a1.ServiceImport{},
+			&corev1.Service{}, &corev1.Endpoints{})
 
 		t.localDynClient = fake.NewDynamicClient()
 		t.brokerDynClient = fake.NewDynamicClient()
